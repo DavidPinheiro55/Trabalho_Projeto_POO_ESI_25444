@@ -1,0 +1,12 @@
+1,David,Teste1,09/11/2024 22:26:12,Baixa,Tratado,tecnico1,testresolvido
+2,David,Teste2,09/11/2024 22:27:02,Baixa,Tratado,tecnico1,tratadocom precaucao
+3,David,teste3,09/11/2024 23:46:55,Baixa,NãoTratado,tecnico1
+4,Teste2,asas,10/11/2024 15:36:28,Baixa,NãoTratado,tecnico1
+5,David,teste com Tecnico a insierir incidente,10/11/2024 15:39:33,Baixa,NãoTratado,tecnico1
+6,David,um dois tres,10/11/2024 16:09:48,Baixa,NãoTratado,tecnico1
+7,David,ds,10/11/2024 16:10:23,Baixa,NãoTratado,tecnico1
+8,Teste,teste,10/11/2024 16:32:47,Baixa,NãoTratado,tecnico1
+9,Teste,Teste4,10/11/2024 16:32:56,Baixa,NãoTratado,tecnico1
+10,David,Teste Now,10/11/2024 16:39:11,Media,NãoTratado,tecnico1
+11,David,TesteFinal,10/11/2024 18:08:50,Baixa,NãoTratado,tecnico1
+12,David,Assssas,12/11/2024 11:00:31,Baixa,Tratado,tecnico1,Teste34

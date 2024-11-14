@@ -1,0 +1,8 @@
+David,0000,Cliente
+Teste,1234,Cliente
+ola,ola,Cliente
+dev,dev,Administrador
+tecnico1,ZLP17,Técnico
+oi,oi,Cliente
+David0,0000,Técnico
+POO,C3JAH,Técnico
