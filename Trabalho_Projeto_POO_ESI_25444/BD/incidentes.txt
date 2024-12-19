@@ -10,3 +10,12 @@
 10,David,Teste Now,10/11/2024 16:39:11,Media,NãoTratado,tecnico1
 11,David,TesteFinal,10/11/2024 18:08:50,Baixa,NãoTratado,tecnico1
 12,David,Assssas,12/11/2024 11:00:31,Baixa,Tratado,tecnico1,Teste34
+13,David,Teste,17/12/2024 21:41:11,Baixa,Tratado,David0,teste
+14,David,Teste2,17/12/2024 21:42:54,Baixa,Tratado,David0,teste25
+15,David,teste 3,17/12/2024 21:44:33,Baixa,Tratado,David0,
+16,David,Teste5,17/12/2024 22:23:05,Baixa,Tratado,David0,asfdg
+17,David,Teste1,18/12/2024 20:29:20,Baixa,Tratado,David0,Testecom suceso
+18,David,Teste,18/12/2024 22:36:32,Baixa,Tratado,David0,TesteFinal
+19,David,74,18/12/2024 22:36:42,Alta,NãoTratado,,
+20,David,Teste99,18/12/2024 22:58:06,Baixa,NãoTratado,,
+21,David,Teste Final,18/12/2024 22:59:36,Baixa,Tratado,David0,ola

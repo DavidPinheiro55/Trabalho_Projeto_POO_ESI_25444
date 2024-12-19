@@ -21,10 +21,10 @@ namespace Trabalho_Projeto_POO_ESI_25444
             //MessageBox.Show($"Existem {porAtribuirCount} incidentes Por Atribuir.", "Incidentes Por Atribuir", MessageBoxButtons.OK, MessageBoxIcon.Information);
             linkLabel2.Text = porAtribuirCount.ToString();
 
-            int ntratados = GestorIncidentes.ContarIncidentesNaoTratados();
+            int ntratados = GestorIncidentes.ContarIncidentesNaoTratados(nomeUtilizador);
             linkLabel1.Text = ntratados.ToString();
             this.nomeUtilizador = nomeUtilizador;
-            lblwelcome.Text = nomeUtilizador.ToString();
+            //lblwelcome.Text = nomeUtilizador.ToString();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e){}
@@ -73,7 +73,8 @@ namespace Trabalho_Projeto_POO_ESI_25444
 
             // Após modificar os incidentes, recarrega a lista de incidentes não atribuídos
             CarregarIncidentesNaoAtribuidos(); // Atualiza a visualização dos incidentes
-            GestorIncidentes.ContarIncidentesNaoTratados();
+            checklistincidente.Refresh();
+            GestorIncidentes.ContarIncidentesNaoTratados(nomeUtilizador);
             GestorIncidentes.ContarIncidentesPorAtribuir();
         }
 
@@ -106,6 +107,13 @@ namespace Trabalho_Projeto_POO_ESI_25444
             formTecnicoTratarIncidentes.Show();
             this.Close();
 
+        }
+
+        private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTecnico formTecnico = new FormTecnico(nomeUtilizador);
+            formTecnico.Show();
+            this.Close();
         }
     }
 }

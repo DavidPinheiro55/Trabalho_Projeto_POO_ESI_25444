@@ -6,3 +6,5 @@ tecnico1,ZLP17,Técnico
 oi,oi,Cliente
 David0,0000,Técnico
 POO,C3JAH,Técnico
+teste,MGYUZ,Técnico
+1,1,Cliente

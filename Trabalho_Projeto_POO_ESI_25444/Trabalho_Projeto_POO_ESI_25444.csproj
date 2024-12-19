@@ -46,108 +46,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administrador.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Enum\Prioridade.cs" />
-    <Compile Include="Enum\StatusIncidente.cs" />
-    <Compile Include="Enum\TipoUtilizador.cs" />
-    <Compile Include="FormAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAdmin.Designer.cs">
-      <DependentUpon>FormAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormAdminAddTecnico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAdminAddTecnico.Designer.cs">
-      <DependentUpon>FormAdminAddTecnico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormArquivo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormArquivo.Designer.cs">
-      <DependentUpon>FormArquivo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormCriarIncidente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCriarIncidente.Designer.cs">
-      <DependentUpon>FormCriarIncidente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTecnico.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTecnico.Designer.cs">
-      <DependentUpon>FormTecnico.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTecnicoInserirIncidente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTecnicoInserirIncidente.Designer.cs">
-      <DependentUpon>FormTecnicoInserirIncidente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormTecnicoTratarIncidentes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTecnicoTratarIncidentes.Designer.cs">
-      <DependentUpon>FormTecnicoTratarIncidentes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormUtilizador.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormUtilizador.Designer.cs">
-      <DependentUpon>FormUtilizador.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormVisualizarIncidente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormVisualizarIncidente.Designer.cs">
-      <DependentUpon>FormVisualizarIncidente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GestorIncidentes.cs" />
-    <Compile Include="GestorUtilizador.cs" />
-    <Compile Include="Incidente.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DAL\Administrador.cs" />
+    <Compile Include="DAL\Cliente.cs" />
+    <Compile Include="DAL\Enum\Prioridade.cs" />
+    <Compile Include="DAL\Enum\StatusIncidente.cs" />
+    <Compile Include="DAL\Enum\TipoUtilizador.cs" />
+    <Compile Include="DAL\GestorIncidentes.cs" />
+    <Compile Include="DAL\GestorUtilizador.cs" />
+    <Compile Include="DAL\Incidente.cs" />
+    <Compile Include="DAL\Program.cs" />
+    <Compile Include="DAL\Tecnico.cs" />
+    <Compile Include="DAL\Utilizador.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tecnico.cs" />
-    <Compile Include="Utilizador.cs" />
-    <EmbeddedResource Include="FormAdmin.resx">
+    <Compile Include="UI\FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormAdminAddTecnico.resx">
-      <DependentUpon>FormAdminAddTecnico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormArquivo.resx">
+    </Compile>
+    <Compile Include="UI\FormArquivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormArquivo.Designer.cs">
       <DependentUpon>FormArquivo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormCriarIncidente.resx">
+    </Compile>
+    <Compile Include="UI\FormCriarIncidente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormCriarIncidente.Designer.cs">
       <DependentUpon>FormCriarIncidente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
+    </Compile>
+    <Compile Include="UI\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTecnico.resx">
+    </Compile>
+    <Compile Include="UI\FormTecnico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTecnico.Designer.cs">
       <DependentUpon>FormTecnico.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTecnicoInserirIncidente.resx">
+    </Compile>
+    <Compile Include="UI\FormTecnicoInserirIncidente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTecnicoInserirIncidente.Designer.cs">
       <DependentUpon>FormTecnicoInserirIncidente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTecnicoTratarIncidentes.resx">
+    </Compile>
+    <Compile Include="UI\FormTecnicoTratarIncidentes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormTecnicoTratarIncidentes.Designer.cs">
       <DependentUpon>FormTecnicoTratarIncidentes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormUtilizador.resx">
+    </Compile>
+    <Compile Include="UI\FormUtilizador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormUtilizador.Designer.cs">
       <DependentUpon>FormUtilizador.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormVisualizarIncidente.resx">
+    </Compile>
+    <Compile Include="UI\FormVisualizarIncidente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormVisualizarIncidente.Designer.cs">
       <DependentUpon>FormVisualizarIncidente.cs</DependentUpon>
-    </EmbeddedResource>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -158,6 +122,33 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormArquivo.resx">
+      <DependentUpon>FormArquivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormCriarIncidente.resx">
+      <DependentUpon>FormCriarIncidente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTecnico.resx">
+      <DependentUpon>FormTecnico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTecnicoInserirIncidente.resx">
+      <DependentUpon>FormTecnicoInserirIncidente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormTecnicoTratarIncidentes.resx">
+      <DependentUpon>FormTecnicoTratarIncidentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormUtilizador.resx">
+      <DependentUpon>FormUtilizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormVisualizarIncidente.resx">
+      <DependentUpon>FormVisualizarIncidente.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -174,9 +165,9 @@
   <ItemGroup>
     <Content Include="BD\incidentes.txt" />
     <Content Include="BD\utilizadores.txt" />
-    <None Include="Resources\redefinir-senha.png" />
-    <None Include="Resources\casa.png" />
-    <None Include="Resources\power-off.png" />
+    <None Include="UI\Resources\redefinir-senha.png" />
+    <None Include="UI\Resources\power-off.png" />
+    <None Include="UI\Resources\casa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

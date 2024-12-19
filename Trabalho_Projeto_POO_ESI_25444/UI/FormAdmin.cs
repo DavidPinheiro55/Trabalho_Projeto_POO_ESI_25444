@@ -10,45 +10,30 @@ using System.Windows.Forms;
 
 namespace Trabalho_Projeto_POO_ESI_25444
 {
-    // Formulário de administração para adicionar um novo técnico
-    public partial class FormAdminAddTecnico : Form
+    public partial class FormAdmin : Form
     {
-        // Inicializa o GestorUtilizadores para lidar com o registo no arquivo
         private GestorUtilizadores gestorUtilizadores = new GestorUtilizadores();
         private List<Utilizador> listaUtilizadores = new List<Utilizador>(); // Lista local para armazenar os utilizadores
         private string senhaGerada; // Variável para armazenar a senha gerada para o novo técnico
-
-        // Construtor do formulário, inicializa os componentes da interface
-        public FormAdminAddTecnico()
+        public FormAdmin()
         {
             InitializeComponent();
         }
 
-        // Evento de clique no rótulo (não implementado, mas necessário para o funcionamento do formulário)
-        private void label1_Click(object sender, EventArgs e)
+        private void adiciobarTecnicosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
         }
 
-        // Evento de clique na imagem (close button) para fechar o formulário
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();  // Fecha o formulário quando o ícone de fechar é clicado
+            Application.Exit();
         }
 
-        // Evento de clique no ícone para gerar a senha para o técnico
-        private void pictureBox3_Click(object sender, EventArgs e)
+        private void FormAdmin_Load(object sender, EventArgs e)
         {
-            // Gera uma senha básica de 5 caracteres
-            senhaGerada = GerarSenhaBasica();
 
-            // Exibe a senha gerada em uma caixa de mensagem
-            MessageBox.Show($"A senha gerada para o técnico é: {senhaGerada}", "Senha Gerada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // Preenche o campo de senha com a senha gerada
-            txtpassword.Text = senhaGerada;
         }
-
-        // Método responsável por gerar uma senha básica de 5 caracteres
         private string GerarSenhaBasica()
         {
             // Conjunto de caracteres que podem ser usados na senha (letras maiúsculas e números)
@@ -66,7 +51,6 @@ namespace Trabalho_Projeto_POO_ESI_25444
             return new string(senhaArray);
         }
 
-        // Evento de clique no botão para inserir o técnico
         private void btnInserirTecnico_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();  // Pega o nome de usuário do campo de texto e remove espaços extras
@@ -111,9 +95,21 @@ namespace Trabalho_Projeto_POO_ESI_25444
             }
         }
 
-        // Evento disparado ao carregar o formulário (não utilizado aqui)
-        private void FormAdminAddTecnico_Load(object sender, EventArgs e)
+        private void pictureBox3_Click(object sender, EventArgs e)
         {
+            // Gera uma senha básica de 5 caracteres
+            senhaGerada = GerarSenhaBasica();
+
+            // Exibe a senha gerada em uma caixa de mensagem
+            MessageBox.Show($"A senha gerada para o técnico é: {senhaGerada}", "Senha Gerada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Preenche o campo de senha com a senha gerada
+            txtpassword.Text = senhaGerada;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

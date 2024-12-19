@@ -5,6 +5,7 @@ using Trabalho_Projeto_POO_ESI_25444.Enum;
 using System.Reflection.Emit;
 using System.Linq;
 using System.Windows.Forms;
+using Trabalho_Projeto_POO_ESI_25444;
 
 namespace Trabalho_Projeto_POO_ESI_25444
 {
@@ -17,7 +18,7 @@ namespace Trabalho_Projeto_POO_ESI_25444
         public static void SalvarIncidente(Incidente incidente)
         {
             // Formata os dados do incidente para uma linha de texto e salva no ficheiro.
-            string linha = $"{incidente.Id},{incidente.Criador},{incidente.Descricao},{incidente.DataCriacao},{incidente.TipoPrioridade},{incidente.Status},{incidente.TecnicoAtribuido}";
+            string linha = $"{incidente.Id},{incidente.Criador},{incidente.Descricao},{incidente.DataCriacao},{incidente.TipoPrioridade},{incidente.Status},{incidente.TecnicoAtribuido},{incidente.Avaliacao}";
             File.AppendAllText(caminhoFicheiroIncidentes, linha + Environment.NewLine);
         }
 
@@ -180,7 +181,7 @@ namespace Trabalho_Projeto_POO_ESI_25444
                 {
                     string[] partes = linha.Split(',');
 
-                    if (partes.Length == 7) // Verifica se a linha tem todos os dados necessários
+                    if (partes.Length == 8) // Verifica se a linha tem todos os dados necessários
                     {
                         // Converte e cria o incidente
                         int id;
@@ -222,6 +223,10 @@ namespace Trabalho_Projeto_POO_ESI_25444
                                 continue; // Ou outro método de erro
                         }
 
+
+                        // Lendo o técnico atribuído
+                        string tecnicoAtribuido = !string.IsNullOrEmpty(partes[6]) ? partes[6] : "Não atribuído";
+
                         // Criação do objeto Incidente usando o construtor correto
                         // Usando o construtor com ID, Criador, Descricao, DataCriacao, e TipoPrioridade
                         Incidente incidente = new Incidente(criador, descricao, prioridade);
@@ -262,7 +267,7 @@ namespace Trabalho_Projeto_POO_ESI_25444
 
             return count;
         }
-        public static int ContarIncidentesNaoTratados()
+        public static int ContarIncidentesNaoTratados(string username)
         {
             int count = 0;
 
@@ -275,7 +280,7 @@ namespace Trabalho_Projeto_POO_ESI_25444
                     var dados = linha.Split(',');
 
                     // Verificar se o incidente tem o status "NãoTratado"
-                    if (dados.Length >= 6 && dados[5] == "NãoTratado")
+                    if (dados.Length >= 7 && dados[5] == "NãoTratado" && dados[6] == username)
                     {
                         count++;
                     }
@@ -651,11 +656,42 @@ namespace Trabalho_Projeto_POO_ESI_25444
             return incidentesNaoTratados;
         }
 
+        public static void AtualizarIncidenteNoArquivo(Incidente incidenteAtualizado)
+        {
+           string[] linhas = File.ReadAllLines(caminhoFicheiroIncidentes);
+
+            for (int i = 0; i < linhas.Length; i++)
+            {
+                var dados = linhas[i].Split(',');
+
+                // Verifica se a linha tem o número esperado de colunas (mínimo 8)
+                if (dados.Length < 8)
+                {
+                    Console.WriteLine($"Linha {i} mal formatada. Não tem o número esperado de colunas.");
+                    // Adiciona uma coluna de resolução vazia, caso não exista
+                    Array.Resize(ref dados, 8);
+                    dados[8] = ""; // Inicializa a resolução vazia
+                }
+
+                // Verifica se o ID corresponde ao incidente
+                if (int.Parse(dados[0]) == incidenteAtualizado.Id)
+                {
+                    // Atualiza o status para "Tratado"
+                    dados[5] = StatusIncidente.Tratado.ToString();
+
+                    // Atualiza a resolução (coluna 7)
+                    // dados[8] = incidenteAtualizado.Avaliacao;
+                    dados[7] = incidenteAtualizado.Avaliacao.HasValue ? incidenteAtualizado.Avaliacao.Value.ToString() : ""; // Converte a avaliação para string
+                    // Atualiza a linha com os novos dados
+                    linhas[i] = string.Join(",", dados);
+                }
+            }
+
+            // Salva as alterações no arquivo
+            File.WriteAllLines(caminhoFicheiroIncidentes, linhas);
+        }
 
     }
 }
-
-
-
 
 

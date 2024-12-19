@@ -59,25 +59,28 @@ namespace Trabalho_Projeto_POO_ESI_25444
         {
             // Carrega todos os incidentes do arquivo usando o método original
             List<Incidente> todosIncidentes = GestorIncidentes.CarregarIncidentesDoArquivo(nomeUtilizador);
+           
 
             // Filtra os incidentes não tratados pelo Utilizador
             var incidentesNaoTratados = todosIncidentes.Where(i => i.Criador == nomeUtilizador && i.Status == StatusIncidente.NãoTratado).ToList();
 
-           
-           
-                // Limpa as linhas atuais no DataGridView
-                dgvIncidentes.Rows.Clear();
+ 
+
+
+            // Limpa as linhas atuais no DataGridView
+            dgvIncidentes.Rows.Clear();
 
                 // Adiciona cada incidente não tratado ao DataGridView
                 foreach (var incidente in incidentesNaoTratados)
                 {
-                    dgvIncidentes.Rows.Add(
-                        incidente.Id,                    
+                dgvIncidentes.Rows.Add(
+                        incidente.Id.ToString(),                    
                         incidente.Criador,
                         incidente.Descricao,
                         incidente.TipoPrioridade.ToString(),
-                        incidente.Status.ToString(),
-                        incidente.TecnicoAtribuido
+                        //incidente.Status.ToString(),
+                        //incidente.TecnicoAtribuido
+                        !string.IsNullOrEmpty(incidente.TecnicoAtribuido) ? incidente.TecnicoAtribuido : "Não atribuído"
                     );
                 }
             
@@ -100,5 +103,12 @@ namespace Trabalho_Projeto_POO_ESI_25444
         }
 
         private void dgvIncidentes_CellContentClick(object sender, DataGridViewCellEventArgs e){}
+
+        private void arquivoIncidenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormArquivo formArquivo = new FormArquivo(nomeUtilizador);
+            formArquivo.Show();
+            this.Close();
+        }
     }
 }

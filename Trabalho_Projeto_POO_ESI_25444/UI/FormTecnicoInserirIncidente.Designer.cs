@@ -46,6 +46,7 @@
             this.lblDetalheInci = new System.Windows.Forms.Label();
             this.btnCancelarIncidente = new System.Windows.Forms.Button();
             this.btnGuardarIncidente = new System.Windows.Forms.Button();
+            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +55,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incidenteToolStripMenuItem});
+            this.incidenteToolStripMenuItem,
+            this.hOMEToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -81,8 +83,9 @@
             // tratarIncidenteToolStripMenuItem
             // 
             this.tratarIncidenteToolStripMenuItem.Name = "tratarIncidenteToolStripMenuItem";
-            this.tratarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.tratarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tratarIncidenteToolStripMenuItem.Text = "Tratar Incidentes";
+            this.tratarIncidenteToolStripMenuItem.Click += new System.EventHandler(this.tratarIncidenteToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -134,7 +137,7 @@
             this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(75, 116);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtname.Margin = new System.Windows.Forms.Padding(2);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(136, 23);
             this.txtname.TabIndex = 17;
@@ -146,7 +149,7 @@
             this.txtDateCriacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDateCriacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateCriacao.Location = new System.Drawing.Point(386, 116);
-            this.txtDateCriacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDateCriacao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDateCriacao.Name = "txtDateCriacao";
             this.txtDateCriacao.ReadOnly = true;
             this.txtDateCriacao.Size = new System.Drawing.Size(136, 23);
@@ -166,7 +169,7 @@
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(236, 213);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(345, 110);
@@ -187,7 +190,7 @@
             // 
             this.cmbPrioridade.FormattingEnabled = true;
             this.cmbPrioridade.Location = new System.Drawing.Point(91, 195);
-            this.cmbPrioridade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPrioridade.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPrioridade.Name = "cmbPrioridade";
             this.cmbPrioridade.Size = new System.Drawing.Size(92, 21);
             this.cmbPrioridade.TabIndex = 22;
@@ -219,7 +222,7 @@
             this.btnCancelarIncidente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancelarIncidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarIncidente.Location = new System.Drawing.Point(395, 335);
-            this.btnCancelarIncidente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarIncidente.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarIncidente.Name = "btnCancelarIncidente";
             this.btnCancelarIncidente.Size = new System.Drawing.Size(67, 28);
             this.btnCancelarIncidente.TabIndex = 26;
@@ -232,13 +235,20 @@
             this.btnGuardarIncidente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnGuardarIncidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarIncidente.Location = new System.Drawing.Point(484, 335);
-            this.btnGuardarIncidente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarIncidente.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarIncidente.Name = "btnGuardarIncidente";
             this.btnGuardarIncidente.Size = new System.Drawing.Size(70, 28);
             this.btnGuardarIncidente.TabIndex = 25;
             this.btnGuardarIncidente.Text = "Inserir";
             this.btnGuardarIncidente.UseVisualStyleBackColor = false;
             this.btnGuardarIncidente.Click += new System.EventHandler(this.btnGuardarIncidente_Click);
+            // 
+            // hOMEToolStripMenuItem
+            // 
+            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.hOMEToolStripMenuItem.Text = "HOME";
+            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // FormTecnicoInserirIncidente
             // 
@@ -260,7 +270,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTecnicoInserirIncidente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTecnicoInserirIncidente";
@@ -293,5 +303,6 @@
         private System.Windows.Forms.Label lblDetalheInci;
         private System.Windows.Forms.Button btnCancelarIncidente;
         private System.Windows.Forms.Button btnGuardarIncidente;
+        private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
     }
 }

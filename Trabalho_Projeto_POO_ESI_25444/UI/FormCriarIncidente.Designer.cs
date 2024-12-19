@@ -47,7 +47,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.btnGuardarIncidente = new System.Windows.Forms.Button();
             this.btnCancelarIncidente = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -81,20 +80,20 @@
             // 
             this.criarIncidenteToolStripMenuItem.BackColor = System.Drawing.Color.Cyan;
             this.criarIncidenteToolStripMenuItem.Name = "criarIncidenteToolStripMenuItem";
-            this.criarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.criarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.criarIncidenteToolStripMenuItem.Text = "Criar Incidente";
             // 
             // visualizarIncidenteToolStripMenuItem
             // 
             this.visualizarIncidenteToolStripMenuItem.Name = "visualizarIncidenteToolStripMenuItem";
-            this.visualizarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualizarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.visualizarIncidenteToolStripMenuItem.Text = "Visualizar Incidente";
             this.visualizarIncidenteToolStripMenuItem.Click += new System.EventHandler(this.visualizarIncidenteToolStripMenuItem_Click);
             // 
             // arquivoIncidenteToolStripMenuItem
             // 
             this.arquivoIncidenteToolStripMenuItem.Name = "arquivoIncidenteToolStripMenuItem";
-            this.arquivoIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.arquivoIncidenteToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.arquivoIncidenteToolStripMenuItem.Text = "Arquivo Incidente";
             this.arquivoIncidenteToolStripMenuItem.Click += new System.EventHandler(this.arquivoIncidenteToolStripMenuItem_Click);
             // 
@@ -173,7 +172,7 @@
             this.txtname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtname.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(82, 118);
-            this.txtname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtname.Margin = new System.Windows.Forms.Padding(2);
             this.txtname.Name = "txtname";
             this.txtname.ReadOnly = true;
             this.txtname.Size = new System.Drawing.Size(136, 23);
@@ -186,7 +185,7 @@
             this.txtDateCriacao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDateCriacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateCriacao.Location = new System.Drawing.Point(356, 115);
-            this.txtDateCriacao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDateCriacao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDateCriacao.Name = "txtDateCriacao";
             this.txtDateCriacao.ReadOnly = true;
             this.txtDateCriacao.Size = new System.Drawing.Size(136, 23);
@@ -219,7 +218,7 @@
             // 
             this.cmbPrioridade.FormattingEnabled = true;
             this.cmbPrioridade.Location = new System.Drawing.Point(110, 195);
-            this.cmbPrioridade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbPrioridade.Margin = new System.Windows.Forms.Padding(2);
             this.cmbPrioridade.Name = "cmbPrioridade";
             this.cmbPrioridade.Size = new System.Drawing.Size(92, 21);
             this.cmbPrioridade.TabIndex = 13;
@@ -252,29 +251,18 @@
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(247, 220);
-            this.txtDescricao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(345, 110);
             this.txtDescricao.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(32, 250);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 17);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "Adicionar Documentos";
             // 
             // btnGuardarIncidente
             // 
             this.btnGuardarIncidente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnGuardarIncidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarIncidente.Location = new System.Drawing.Point(514, 335);
-            this.btnGuardarIncidente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGuardarIncidente.Margin = new System.Windows.Forms.Padding(2);
             this.btnGuardarIncidente.Name = "btnGuardarIncidente";
             this.btnGuardarIncidente.Size = new System.Drawing.Size(70, 28);
             this.btnGuardarIncidente.TabIndex = 18;
@@ -287,7 +275,7 @@
             this.btnCancelarIncidente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancelarIncidente.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelarIncidente.Location = new System.Drawing.Point(425, 335);
-            this.btnCancelarIncidente.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelarIncidente.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarIncidente.Name = "btnCancelarIncidente";
             this.btnCancelarIncidente.Size = new System.Drawing.Size(67, 28);
             this.btnCancelarIncidente.TabIndex = 19;
@@ -299,7 +287,7 @@
             // 
             this.pictureBox1.Image = global::Trabalho_Projeto_POO_ESI_25444.Properties.Resources.casa;
             this.pictureBox1.Location = new System.Drawing.Point(555, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(45, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -315,7 +303,6 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelarIncidente);
             this.Controls.Add(this.btnGuardarIncidente);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -332,7 +319,7 @@
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormCriarIncidente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCriarIncidente";
@@ -366,7 +353,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtDescricao;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnGuardarIncidente;
         private System.Windows.Forms.Button btnCancelarIncidente;
         private System.Windows.Forms.PictureBox pictureBox1;

@@ -18,7 +18,7 @@ namespace Trabalho_Projeto_POO_ESI_25444
         {
             InitializeComponent();
             this.nomeUtilizador = nomeUtilizador;
-            lblwelcome.Text = nomeUtilizador;
+            //lblwelcome.Text = nomeUtilizador;
         }
 
         private void FormTecnicoTratarIncidentes_Load(object sender, EventArgs e)
@@ -78,6 +78,9 @@ namespace Trabalho_Projeto_POO_ESI_25444
                 GestorIncidentes.AtualizarIncidente(incidenteSelecionado, informacoesResolucao);
 
                 MessageBox.Show("Incidente tratado com sucesso!");
+                FormTecnicoTratarIncidentes formTecnicoTratarIncidente = new FormTecnicoTratarIncidentes(nomeUtilizador);
+                formTecnicoTratarIncidente.Show();
+                this.Close();
             }
             else
             {
@@ -88,6 +91,27 @@ namespace Trabalho_Projeto_POO_ESI_25444
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void inserirIncidenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTecnicoInserirIncidente formTecnicoInserirIncidente = new FormTecnicoInserirIncidente(nomeUtilizador);
+            formTecnicoInserirIncidente.Show();
+            this.Close();
+        }
+
+        private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTecnico formTecnico = new FormTecnico(nomeUtilizador);
+            formTecnico.Show();
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            FormTecnicoTratarIncidentes formTecnicoTratarIncidente = new FormTecnicoTratarIncidentes(nomeUtilizador);
+            formTecnicoTratarIncidente.Show();
+            this.Close();
         }
     }
 }

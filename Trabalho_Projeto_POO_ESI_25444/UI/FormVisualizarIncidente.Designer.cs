@@ -51,7 +51,8 @@
             this.incidenteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,13 +63,13 @@
             this.visualizarIncidenteToolStripMenuItem,
             this.arquivoIncidenteToolStripMenuItem});
             this.incidenteToolStripMenuItem.Name = "incidenteToolStripMenuItem";
-            this.incidenteToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.incidenteToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.incidenteToolStripMenuItem.Text = "Incidentes";
             // 
             // criarIncidenteToolStripMenuItem
             // 
             this.criarIncidenteToolStripMenuItem.Name = "criarIncidenteToolStripMenuItem";
-            this.criarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.criarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.criarIncidenteToolStripMenuItem.Text = "Criar Incidentes";
             this.criarIncidenteToolStripMenuItem.Click += new System.EventHandler(this.criarIncidenteToolStripMenuItem_Click);
             // 
@@ -76,14 +77,15 @@
             // 
             this.visualizarIncidenteToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.visualizarIncidenteToolStripMenuItem.Name = "visualizarIncidenteToolStripMenuItem";
-            this.visualizarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.visualizarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.visualizarIncidenteToolStripMenuItem.Text = "Visualizar Incidentes";
             // 
             // arquivoIncidenteToolStripMenuItem
             // 
             this.arquivoIncidenteToolStripMenuItem.Name = "arquivoIncidenteToolStripMenuItem";
-            this.arquivoIncidenteToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.arquivoIncidenteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.arquivoIncidenteToolStripMenuItem.Text = "Arquivo ";
+            this.arquivoIncidenteToolStripMenuItem.Click += new System.EventHandler(this.arquivoIncidenteToolStripMenuItem_Click);
             // 
             // dgvIncidentes
             // 
@@ -104,7 +106,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvIncidentes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvIncidentes.Location = new System.Drawing.Point(56, 69);
+            this.dgvIncidentes.Location = new System.Drawing.Point(42, 56);
+            this.dgvIncidentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvIncidentes.Name = "dgvIncidentes";
             this.dgvIncidentes.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -117,7 +120,7 @@
             this.dgvIncidentes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvIncidentes.RowHeadersWidth = 51;
             this.dgvIncidentes.RowTemplate.Height = 24;
-            this.dgvIncidentes.Size = new System.Drawing.Size(678, 345);
+            this.dgvIncidentes.Size = new System.Drawing.Size(508, 280);
             this.dgvIncidentes.TabIndex = 1;
             this.dgvIncidentes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvIncidentes_CellContentClick);
             // 
@@ -125,18 +128,20 @@
             // 
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(412, 3);
+            this.lblWelcome.Location = new System.Drawing.Point(309, 2);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(70, 25);
+            this.lblWelcome.Size = new System.Drawing.Size(57, 20);
             this.lblWelcome.TabIndex = 9;
             this.lblWelcome.Text = "label2";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Trabalho_Projeto_POO_ESI_25444.Properties.Resources.casa;
-            this.pictureBox1.Location = new System.Drawing.Point(740, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(555, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(45, 23);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
@@ -144,14 +149,15 @@
             // 
             // FormVisualizarIncidente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblWelcome);
             this.Controls.Add(this.dgvIncidentes);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormVisualizarIncidente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormVisualizarIncidente";

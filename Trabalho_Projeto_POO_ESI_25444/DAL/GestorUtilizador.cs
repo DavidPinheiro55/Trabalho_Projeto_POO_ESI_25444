@@ -9,10 +9,16 @@ namespace Trabalho_Projeto_POO_ESI_25444
 {
     public class GestorUtilizadores
     {
-        // Caminho para o arquivo de armazenamento de utilizadores
+        /// <summary>
+        /// Caminho para o arquivo de armazenamento de utilizadores
+        /// </summary>
         private readonly string caminhoFicheiro = "../../BD/utilizadores.txt";
 
-        // Método para registrar um novo utilizador no sistema
+        /// <summary>
+        /// Método para registrar um novo utilizador no sistema
+        /// </summary>
+        /// <param name="utilizador">Nome do Utilziador </param>
+        /// <returns>verdadeiro para confirmar o registro bem-sucedido</returns>
         public bool RegistarUtilizador(Utilizador utilizador)
         {
             // Verifica se o arquivo existe e se já há um utilizador com o mesmo nome de utilizador
@@ -28,10 +34,15 @@ namespace Trabalho_Projeto_POO_ESI_25444
                 sw.WriteLine($"{utilizador.Username},{utilizador.Password},{utilizador.ObterTipo()}");
             }
 
-            return true; // Retorna verdadeiro para confirmar o registro bem-sucedido
+            return true; 
         }
 
-        // Método para autenticar um utilizador com base em username e password
+        /// <summary>
+        /// Método para autenticar um utilizador com base em username e password
+        /// </summary>
+        /// <param name="username">Verificação do Utilizador</param>
+        /// <param name="password">Verificação da Password</param>
+        /// <returns>null se não houver correspondência</returns>
         public Utilizador AutenticarUtilizador(string username, string password)
         {
             // Se o arquivo não existir, retorna null, indicando que o utilizador não existe
@@ -55,18 +66,20 @@ namespace Trabalho_Projeto_POO_ESI_25444
                 }
             }
 
-            return null; // Retorna null se não houver correspondência
+            return null; 
         }
 
-        // Construtor da classe GestorUtilizadores
+        /// <summary>
+        /// Construtor da classe GestorUtilizadores
+        /// </summary>
         public GestorUtilizadores()
         {
             VerificarAdministrador(); // Garante que um administrador exista ao iniciar
         }
 
-
-
-        // Método para criar um administrador padrão com credenciais predefinidas
+        /// <summary>
+        /// Método para criar um administrador padrão com credenciais predefinidas
+        /// </summary>
         public void CriarAdministrador()
         {
             // Instancia um novo administrador com username e password "dev"
@@ -77,10 +90,13 @@ namespace Trabalho_Projeto_POO_ESI_25444
             {
                 // Escreve as informações do administrador: Username, Password, Tipo
                 sw.WriteLine($"{admin.Username},{admin.Password},{admin.ObterTipo()}");
+               
             }
         }
 
-        // Método para verificar se existe um administrador no sistema
+        /// <summary>
+        /// Método para verificar se existe um administrador no sistema
+        /// </summary>
         public void VerificarAdministrador()
         {
             // Se o arquivo de utilizadores não existir, cria-o e adiciona o administrador
@@ -100,9 +116,10 @@ namespace Trabalho_Projeto_POO_ESI_25444
             }
         }
 
-        
-
-        // Método para gerar uma senha básica para novos utilizadores técnicos
+        /// <summary>
+        /// Método para gerar uma senha básica para novos utilizadores técnicos
+        /// </summary>
+        /// <returns>senha gerada como uma string</returns>
         public string GerarSenhaBasica()
         {
             // Define o conjunto de caracteres permitidos na senha
@@ -116,7 +133,7 @@ namespace Trabalho_Projeto_POO_ESI_25444
                 senhaArray[i] = caracteres[random.Next(caracteres.Length)];
             }
 
-            return new string(senhaArray); // Retorna a senha gerada como uma string
+            return new string(senhaArray); 
         }
     }
 }

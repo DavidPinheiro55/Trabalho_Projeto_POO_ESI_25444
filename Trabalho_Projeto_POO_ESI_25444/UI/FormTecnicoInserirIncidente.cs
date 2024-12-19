@@ -80,5 +80,19 @@ namespace Trabalho_Projeto_POO_ESI_25444
         }
 
         private void FormTecnicoInserirIncidente_Load(object sender, EventArgs e){}
+
+        private void hOMEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTecnico formTecnico = new FormTecnico(nomeUtilizador);
+            formTecnico.Show();
+            this.Close();
+        }
+
+        private void tratarIncidenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTecnicoTratarIncidentes formTecnicoTratarIncidentes = new FormTecnicoTratarIncidentes(nomeUtilizador);
+            formTecnicoTratarIncidentes.Show();
+            this.Close();
+        }
     }
 }

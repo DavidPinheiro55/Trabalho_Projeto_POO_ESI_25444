@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblwelcome = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.incidenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inserirIncidenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tratarIncidenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtresolucao = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btntratado = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.checklistIncidentes = new System.Windows.Forms.CheckedListBox();
@@ -55,22 +54,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblwelcome
-            // 
-            this.lblwelcome.AutoSize = true;
-            this.lblwelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwelcome.Location = new System.Drawing.Point(254, 1);
-            this.lblwelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblwelcome.Name = "lblwelcome";
-            this.lblwelcome.Size = new System.Drawing.Size(60, 24);
-            this.lblwelcome.TabIndex = 19;
-            this.lblwelcome.Text = "label3";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.incidenteToolStripMenuItem});
+            this.incidenteToolStripMenuItem,
+            this.hOMEToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -92,6 +81,7 @@
             this.inserirIncidenteToolStripMenuItem.Name = "inserirIncidenteToolStripMenuItem";
             this.inserirIncidenteToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.inserirIncidenteToolStripMenuItem.Text = "Inserir Incidentes";
+            this.inserirIncidenteToolStripMenuItem.Click += new System.EventHandler(this.inserirIncidenteToolStripMenuItem_Click);
             // 
             // tratarIncidenteToolStripMenuItem
             // 
@@ -99,6 +89,13 @@
             this.tratarIncidenteToolStripMenuItem.Name = "tratarIncidenteToolStripMenuItem";
             this.tratarIncidenteToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.tratarIncidenteToolStripMenuItem.Text = "Tratar Incidentes";
+            // 
+            // hOMEToolStripMenuItem
+            // 
+            this.hOMEToolStripMenuItem.Name = "hOMEToolStripMenuItem";
+            this.hOMEToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
+            this.hOMEToolStripMenuItem.Text = "HOME";
+            this.hOMEToolStripMenuItem.Click += new System.EventHandler(this.hOMEToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -115,7 +112,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox1.Location = new System.Drawing.Point(41, 78);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(42, 20);
@@ -158,7 +155,7 @@
             // 
             this.txtNomeUtilizador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtNomeUtilizador.Location = new System.Drawing.Point(114, 121);
-            this.txtNomeUtilizador.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNomeUtilizador.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomeUtilizador.Name = "txtNomeUtilizador";
             this.txtNomeUtilizador.ReadOnly = true;
             this.txtNomeUtilizador.Size = new System.Drawing.Size(100, 20);
@@ -179,7 +176,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox2.Location = new System.Drawing.Point(213, 78);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.Size = new System.Drawing.Size(157, 20);
@@ -200,7 +197,7 @@
             // 
             this.txtprioridade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtprioridade.Location = new System.Drawing.Point(304, 123);
-            this.txtprioridade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtprioridade.Margin = new System.Windows.Forms.Padding(2);
             this.txtprioridade.Name = "txtprioridade";
             this.txtprioridade.ReadOnly = true;
             this.txtprioridade.Size = new System.Drawing.Size(84, 20);
@@ -221,7 +218,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.textBox3.Location = new System.Drawing.Point(41, 189);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -243,29 +240,18 @@
             // 
             this.txtresolucao.BackColor = System.Drawing.Color.White;
             this.txtresolucao.Location = new System.Drawing.Point(41, 281);
-            this.txtresolucao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtresolucao.Margin = new System.Windows.Forms.Padding(2);
             this.txtresolucao.Multiline = true;
             this.txtresolucao.Name = "txtresolucao";
             this.txtresolucao.Size = new System.Drawing.Size(312, 46);
             this.txtresolucao.TabIndex = 33;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(9, 349);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(127, 17);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Inserir Documento:";
             // 
             // btntratado
             // 
             this.btntratado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btntratado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btntratado.Location = new System.Drawing.Point(453, 251);
-            this.btntratado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btntratado.Margin = new System.Windows.Forms.Padding(2);
             this.btntratado.Name = "btntratado";
             this.btntratado.Size = new System.Drawing.Size(89, 25);
             this.btntratado.TabIndex = 35;
@@ -278,18 +264,19 @@
             this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(453, 301);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 25);
             this.btnCancelar.TabIndex = 36;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // checklistIncidentes
             // 
             this.checklistIncidentes.FormattingEnabled = true;
             this.checklistIncidentes.Location = new System.Drawing.Point(391, 57);
-            this.checklistIncidentes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checklistIncidentes.Margin = new System.Windows.Forms.Padding(2);
             this.checklistIncidentes.Name = "checklistIncidentes";
             this.checklistIncidentes.Size = new System.Drawing.Size(210, 139);
             this.checklistIncidentes.TabIndex = 37;
@@ -303,7 +290,6 @@
             this.Controls.Add(this.checklistIncidentes);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btntratado);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtresolucao);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox3);
@@ -317,10 +303,9 @@
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblwelcome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormTecnicoTratarIncidentes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTecnicoTratarIncidentes";
@@ -334,8 +319,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblwelcome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem incidenteToolStripMenuItem;
@@ -354,9 +337,9 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtresolucao;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btntratado;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.CheckedListBox checklistIncidentes;
+        private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
     }
 }
